@@ -1,0 +1,9 @@
+<VirtualHost /:3002>
+        ServerName stapp03.stratos.xfusioncorp.com
+        Redirect 301 / http://www.stapp03.stratos.xfusioncorp.com:3002/
+</VirtualHost>
+
+<VirtualHost */blog/>
+        ServerName http://www.stapp03.stratos.xfusioncorp.com:3002/blog
+        Redirect 302  /blog/ http://www.stapp03.stratos.xfusioncorp.com:3002/news/
+</VirtualHost>
